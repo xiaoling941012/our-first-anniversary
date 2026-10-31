@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f2ed" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>我的情書編輯室 ♡ 一週年紀念</title>
+  <link rel="stylesheet" href="editor.css" />
+  <script defer src="config.js"></script>
+  <script defer src="editor.js"></script>
+</head>
+<body>
+  <header class="editor-header">
+    <a class="brand" href="index.html">Y <span>♥</span> M <small>OUR FIRST YEAR</small></a>
+    <a class="back-link" href="index.html">↗ 看紀念網站</a>
+  </header>
+
+  <main class="page">
+    <div class="page-intro">
+      <p class="eyebrow">PRIVATE WRITING ROOM <span aria-hidden="true">✿</span> 2025.10.31 — 2026.10.31</p>
+      <h1>想對妳說的話，<br><em>我自己寫。</em></h1>
+      <p>在這裡慢慢寫下想送給她的一週年情書。右邊會即時顯示她拆開信封後看到的樣子。</p>
+    </div>
+
+    <div class="notice" role="note">
+      <span class="notice-icon" aria-hidden="true">♡</span>
+      <div><strong>這是你的私人草稿區。</strong> 輸入時會暫存在這台裝置的瀏覽器，<b>不會自動更新公開網站</b>。完成後請使用下方「發布到 GitHub」步驟。這個編輯器本身沒有密碼保護，請勿存放秘密或登入憑證。</div>
+    </div>
+
+    <div class="workspace">
+      <section class="edit-card" aria-label="編輯情書">
+        <div class="card-heading"><div><span class="eyebrow">01 · WRITE</span><h2>寫一封信給她</h2></div><span class="stamp">✎</span></div>
+        <label for="letterTitle">開頭稱呼</label>
+        <input id="letterTitle" maxlength="80" autocomplete="off" placeholder="親愛的妳：" />
+        <label for="letterContent">情書正文</label>
+        <textarea id="letterContent" maxlength="15000" spellcheck="false" rows="15" placeholder="把你想對她說的話寫在這裡……\n\n空一行就能分成新的一段。"></textarea>
+        <div class="textarea-meta"><span>空一行即可分段，原本的換行也會保留。</span><span id="characterCount">0 字</span></div>
+        <label for="letterSignature">最後署名</label>
+        <input id="letterSignature" maxlength="100" autocomplete="off" placeholder="一直喜歡妳的人 ♡" />
+        <div class="save-line" role="status" aria-live="polite"><span class="status-dot"></span><span id="saveStatus">準備開始寫信</span></div>
+        <div class="action-row">
+          <button id="copyButton" type="button" class="action primary">複製發布內容 <span aria-hidden="true">⧉</span></button>
+          <button id="downloadButton" type="button" class="action secondary">下載 config.js ↓</button>
+        </div>
+        <button id="resetButton" type="button" class="text-button">清除本機草稿，回到已發布版本</button>
+      </section>
+
+      <section class="preview-card" id="preview" aria-label="情書即時預覽">
+        <div class="card-heading"><div><span class="eyebrow">02 · PREVIEW</span><h2>她會看到的情書</h2></div><span class="stamp">♡</span></div>
+        <div class="letter-sheet">
+          <p class="letter-overline">A LETTER TO YOU · ♡</p>
+          <h3 id="previewTitle"></h3>
+          <div class="letter-copy" id="previewBody"></div>
+          <p class="letter-sign" id="previewSignature"></p>
+          <div class="letter-bottom">OUR FIRST YEAR · AND COUNTING</div>
+        </div>
+        <p class="preview-note">這裡會顯示實際文字與段落；網站正式呈現時會搭配信封開啟動畫。</p>
+      </section>
+    </div>
+
+    <section class="publish-card" id="publish">
+      <div class="card-heading"><div><span class="eyebrow">03 · PUBLISH</span><h2>把情書更新到紀念網站</h2></div><span class="stamp">↗</span></div>
+      <p>GitHub Pages 是靜態網站，因此<b>按下儲存只會保留這台裝置的草稿</b>。要讓她掃描 QR Code 後看到你新寫的情書，還要完成以下步驟：</p>
+      <ol>
+        <li>在上方完成情書，點「<b>複製發布內容</b>」。</li>
+        <li>打開你的 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub 儲存庫 ↗</a>，找到 <code>config.js</code> 檔案，按右上角鉛筆圖示編輯。</li>
+        <li>將 <code>config.js</code> 原有內容<b>全部選取並取代</b>成剛才複製的內容，按 <b>Commit changes</b> 儲存。</li>
+        <li>打開紀念網站，重新整理並拆開情書，確認已更新後，再把 QR Code 卡片送給她。</li>
+      </ol>
+      <p class="publish-note">如果手機無法複製程式碼，也可點「下載 config.js」，再使用 GitHub 的 Add file → Upload files 上傳並覆蓋同名檔案（依 GitHub 介面顯示為準）。不要將私人帳號密碼或 GitHub Token 貼到網站。</p>
+    </section>
+
+    <footer>只屬於你們的第一年 · ♡ <a href="card.html">查看 QR 卡片</a></footer>
+  </main>
+</body>
+</html>

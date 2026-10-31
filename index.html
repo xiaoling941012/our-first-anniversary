@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f2ed" />
+  <meta name="description" content="有一份小小的禮物，想送給最特別的妳。" />
+  <meta property="og:title" content="To My Favorite Person · 一週年快樂" />
+  <meta property="og:description" content="一封只想寫給妳的情書。" />
+  <meta property="og:type" content="website" />
+  <title>To My Favorite Person — 一週年快樂</title>
+  <link rel="preload" as="image" href="assets/first-mirror.webp" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a href="#home" class="wordmark" aria-label="回到首頁">Y<span class="logo-heart">♥</span>M <small>our first year</small></a>
+    <span class="header-stamp">EST. IN LOVE <span aria-hidden="true">✦</span></span>
+  </header>
+  <main>
+    <section id="home" class="hero" aria-label="一週年紀念禮物">
+      <div class="hero-side-note" aria-hidden="true">A LITTLE LETTER FOR YOU</div>
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="assets/first-mirror.webp" alt="剛在一起時，鏡子前兩人的合照" fetchpriority="high" />
+        <div class="hero-photo-shade"></div>
+        <div class="photo-date">2025.10.31 · THE DAY WE BECAME US ♡</div>
+      </div>
+      <div class="hero-text">
+        <p class="eyebrow"><span class="star">✳</span> 2025.10.31 — 2026.10.31 <span class="star">✳</span></p>
+        <h1>遇見妳，<br><em>是最好的事。</em></h1>
+        <p class="intro-copy">2025 年 10 月 31 日，我們在一起了。<br>這一年，我把所有珍貴的回憶偷偷收集起來，做成一份只送給妳的禮物。</p>
+        <button type="button" class="primary-button" id="enterButton">開啟我們的故事 <span aria-hidden="true">↗</span></button>
+        <p class="tiny-note">請慢慢往下看，最後還有一封信 ♡</p>
+      </div>
+      <div class="scroll-prompt"><span class="scroll-line"></span> scroll to feel the love</div>
+    </section>
+
+    <section class="chapter chapter-one" id="story">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CHAPTER 01 <span class="small-flower">✿</span> YOU & ME</p>
+        <h2>原來幸福，<br><em>是每個平凡的我們。</em></h2>
+        <p>有妳在旁邊，連平常的日子都變得很值得紀念。</p>
+      </div>
+      <div class="count-panel reveal" aria-live="polite">
+        <div class="count-symbol">∞ <span>♡</span></div>
+        <div>
+          <p class="count-label">SINCE 2025.10.31 · A YEAR WITH YOU</p>
+          <p class="count-value" id="daysCount">一起走過一整年</p>
+          <p class="count-sub" id="daysCaption">2025.10.31 是我們故事的開始。</p>
+        </div>
+        <span class="count-panel-star" aria-hidden="true">✳</span>
+      </div>
+      <div class="milestone-row reveal" aria-label="我們的重要紀念日">
+        <div class="milestone"><time datetime="2025-10-31">2025.10.31</time><strong>我們在一起的日子</strong><span>一切從這天開始 ♡</span></div>
+        <span class="milestone-link" aria-hidden="true">♥</span>
+        <div class="milestone"><time datetime="2026-01-14">2026.01.14</time><strong>陪妳過生日</strong><span>一起騎車去看風景 🎂</span></div>
+        <span class="milestone-link" aria-hidden="true">♥</span>
+        <div class="milestone"><time datetime="2026-10-31">2026.10.31</time><strong>我們的一週年</strong><span>第一年，也是一輩子的序章</span></div>
+      </div>
+    </section>
+
+    <section class="gallery-section beginnings-section" id="beginnings">
+      <div class="section-heading reveal center-heading">
+        <p class="eyebrow">CHAPTER 02 · 2025.10.31 · WHEN IT ALL BEGAN</p>
+        <h2>剛在一起的我們，<br><em>一切都那麼心動。</em></h2>
+        <p>再回頭看這些照片，還是會忍不住笑。<br>原來從那時候開始，就有好多值得珍藏的回憶。</p>
+      </div>
+      <div class="polaroid-grid beginning-grid">
+        <button class="polaroid tilt-left reveal" data-full="assets/first-rain.webp" data-caption="一起出門的那個晚上" aria-label="放大照片：一起出門的那個晚上">
+          <img src="assets/first-rain.webp" loading="lazy" alt="鏡子裡，兩人穿著雨衣與安全帽的合照" /><span>一起出門的那個晚上 <i>♡</i></span>
+        </button>
+        <button class="polaroid tilt-right reveal" data-full="assets/first-dessert.webp" data-caption="甜甜的約會時光" aria-label="放大照片：甜甜的約會時光">
+          <img src="assets/first-dessert.webp" loading="lazy" alt="桌上的蛋糕、鬆餅與熱飲" /><span>甜甜的約會時光 <i>✿</i></span>
+        </button>
+        <button class="polaroid tilt-small reveal" data-full="assets/first-selfie.webp" data-caption="那時候的我們" aria-label="放大照片：那時候的我們">
+          <img src="assets/first-selfie.webp" loading="lazy" alt="兩人一起比手勢的合照" /><span>那時候的我們 <i>♡</i></span>
+        </button>
+        <button class="polaroid tilt-left reveal" data-full="assets/first-mirror.webp" data-caption="想一直這樣靠近妳" aria-label="放大照片：想一直這樣靠近妳">
+          <img src="assets/first-mirror.webp" loading="lazy" alt="鏡子前兩人依偎自拍的畫面" /><span>想一直這樣靠近妳 <i>✿</i></span>
+        </button>
+      </div>
+      <div class="video-subsection">
+        <div class="section-heading center-heading reveal">
+          <p class="eyebrow">OUR FIRST LITTLE VIDEOS ♡</p>
+          <h2>還記得那時候，<br><em>我們的模樣嗎？</em></h2>
+          <p>點一下播放，把最初的我們再看一遍。</p>
+        </div>
+        <div class="video-grid video-five-grid">
+        <div class="video-frame reveal">
+          <div class="video-topline"><span>01 / EARLY DAYS</span><span>♥ REC</span></div>
+          <video controls playsinline preload="none" poster="assets/start-01-poster.webp" aria-label="我們的回憶影片第 1 段">
+            <source src="assets/start-01.mp4" type="video/mp4" />你的瀏覽器不支援影片播放。
+          </video>
+          <p>剛在一起時，還有點害羞的我們。</p>
+        </div>
+        <div class="video-frame reveal">
+          <div class="video-topline"><span>02 / EARLY DAYS</span><span>♥ REC</span></div>
+          <video controls playsinline preload="none" poster="assets/start-02-poster.webp" aria-label="我們的回憶影片第 2 段">
+            <source src="assets/start-02.mp4" type="video/mp4" />你的瀏覽器不支援影片播放。
+          </video>
+          <p>喜歡和妳一起留下的每個畫面。</p>
+        </div>
+        <div class="video-frame reveal">
+          <div class="video-topline"><span>03 / EARLY DAYS</span><span>♥ REC</span></div>
+          <video controls playsinline preload="none" poster="assets/start-03-poster.webp" aria-label="我們的回憶影片第 3 段">
+            <source src="assets/start-03.mp4" type="video/mp4" />你的瀏覽器不支援影片播放。
+          </video>
+          <p>那些笑著鬧著的小片段。</p>
+        </div>
+        <div class="video-frame reveal">
+          <div class="video-topline"><span>04 / EARLY DAYS</span><span>♥ REC</span></div>
+          <video controls playsinline preload="none" poster="assets/start-04-poster.webp" aria-label="我們的回憶影片第 4 段">
+            <source src="assets/start-04.mp4" type="video/mp4" />你的瀏覽器不支援影片播放。
+          </video>
+          <p>當時的我們，真的好可愛。</p>
+        </div>
+        <div class="video-frame reveal">
+          <div class="video-topline"><span>05 / EARLY DAYS</span><span>♥ REC</span></div>
+          <video controls playsinline preload="none" poster="assets/start-05-poster.webp" aria-label="我們的回憶影片第 5 段">
+            <source src="assets/start-05.mp4" type="video/mp4" />你的瀏覽器不支援影片播放。
+          </video>
+          <p>原來幸福可以這麼簡單。</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="birthday-section" id="birthday">
+      <div class="section-heading center-heading reveal">
+        <p class="eyebrow">CHAPTER 03 · 2026.01.14 · YOUR BIRTHDAY RIDE</p>
+        <h2>陪妳過生日，<br><em>一起騎車去看世界。</em></h2>
+        <p>2026 年 1 月 14 日，陪妳過生日的那趟騎車旅行。<br>那天的沿途風景，我都想好好記住。</p>
+      </div>
+      <div class="birthday-note reveal">
+        <span class="birthday-cake" aria-hidden="true">🎂</span>
+        <p>那一天，我陪妳過生日。<br>我們一起騎車、一起看風景。<br>對我來說，最幸福的不是去了哪裡，<br>而是身邊坐著的人是妳。</p>
+        <span class="note-bottom">2026.01.14 · A BIRTHDAY I WANT TO REMEMBER ♡</span>
+      </div>
+      <div class="polaroid-grid birthday-grid">
+        <button class="polaroid tilt-left reveal" data-full="assets/helmet-selfie.webp" data-caption="生日這天，一起出發" aria-label="放大照片：生日這天，一起出發">
+          <img src="assets/helmet-selfie.webp" loading="lazy" alt="兩人戴著安全帽在藍天下的自拍" /><span>生日這天，一起出發 <i>♡</i></span>
+        </button>
+        <button class="polaroid tilt-right reveal" data-full="assets/ride.webp" data-caption="陪妳一起騎車" aria-label="放大照片：陪妳一起騎車">
+          <img src="assets/ride.webp" loading="lazy" alt="兩人一同騎乘機車的側面照片" /><span>陪妳一起騎車 <i>✿</i></span>
+        </button>
+        <button class="polaroid tilt-small reveal" data-full="assets/reflection.webp" data-caption="路上的倒影也是回憶" aria-label="放大照片：路上的倒影也是回憶">
+          <img src="assets/reflection.webp" loading="lazy" alt="玻璃反射出戴安全帽的兩人及機車" /><span>路上的倒影也是回憶 <i>♡</i></span>
+        </button>
+        <button class="polaroid tilt-left reveal" data-full="assets/mirror.webp" data-caption="每個轉彎都有妳" aria-label="放大照片：每個轉彎都有妳">
+          <img src="assets/mirror.webp" loading="lazy" alt="道路反光鏡裡兩人騎車的合照" /><span>每個轉彎都有妳 <i>✿</i></span>
+        </button>
+      </div>
+      <div class="feature-video reveal">
+        <div class="video-frame">
+          <div class="video-topline"><span>OUR BIRTHDAY RIDE</span><span>♥ REC</span></div>
+          <video controls playsinline preload="none" poster="assets/clip-01-poster.webp" aria-label="生日騎車留下的影片">
+            <source src="assets/clip-01.mp4" type="video/mp4" />你的瀏覽器不支援影片播放。
+          </video>
+          <p>生日這一程，風景有妳就夠了。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section daily-section" id="memories">
+      <div class="section-heading reveal center-heading">
+        <p class="eyebrow">CHAPTER 04 · THE LITTLE MOMENTS</p>
+        <h2>後來的每一天，<br><em>也想跟妳一起收藏。</em></h2>
+        <p>從咖啡廳、海邊到生活裡的小日常，<br>有妳的畫面，都是喜歡的模樣。</p>
+      </div>
+      <div class="polaroid-grid daily-grid">
+        <button class="polaroid tilt-right reveal" data-full="assets/cafe.webp" data-caption="妳的小日常" aria-label="放大照片：妳的小日常">
+          <img src="assets/cafe.webp" loading="lazy" alt="咖啡廳裡低頭看手機的身影" /><span>妳的小日常 <i>♡</i></span>
+        </button>
+        <button class="polaroid tilt-small reveal" data-full="assets/sea.webp" data-caption="一起去看海" aria-label="放大照片：一起去看海">
+          <img src="assets/sea.webp" loading="lazy" alt="在海邊看著海的身影" /><span>一起去看海 <i>✿</i></span>
+        </button>
+        <button class="polaroid tilt-left reveal" data-full="assets/scrapbook.webp" data-caption="我們的回憶拼貼" aria-label="放大照片：我們的回憶拼貼">
+          <img src="assets/scrapbook.webp" loading="lazy" alt="兩人照片組成的拼貼相簿" /><span>我們的回憶拼貼 <i>♡</i></span>
+        </button>
+      </div>
+      <p class="gallery-footnote" aria-hidden="true">EVERY PHOTO HAS A LITTLE PIECE OF MY HEART. ♡</p>
+    </section>
+
+    <section class="reels-section" id="videos">
+      <div class="reels-intro reveal">
+        <p class="eyebrow">CHAPTER 05 · REPLAY</p>
+        <h2>那些捨不得<br><em>按下暫停的瞬間。</em></h2>
+        <p>再一起重播一次吧。<br>我們的故事，還會繼續拍下去。</p>
+      </div>
+      <div class="video-grid single-video-grid">
+        <div class="video-frame reveal">
+          <div class="video-topline"><span>07 / US, ALWAYS</span><span>♥ REC</span></div>
+          <video controls playsinline preload="none" poster="assets/clip-02-poster.webp" aria-label="我們的回憶影片第 7 段">
+            <source src="assets/clip-02.mp4" type="video/mp4" />你的瀏覽器不支援影片播放。
+          </video>
+          <p>以後也要繼續，拍下更多我們的故事。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section" id="letter">
+      <div class="letter-content reveal">
+        <p class="eyebrow">CHAPTER 06 · JUST FOR YOU</p>
+        <h2>最後，<br><em>有一封信想給妳。</em></h2>
+        <p>可能有些話平常不好意思說，<br>所以這次，讓我寫下來。</p>
+        <div class="letter-envelope" id="envelope" role="button" tabindex="0" aria-label="打開情書">
+          <div class="envelope-back"><span class="envelope-card">TO MY FAVORITE PERSON<br><b>FOREVER & ALWAYS ♡</b></span></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-seal">♥</div>
+        </div>
+        <button class="primary-button open-letter" id="openLetter">點我拆開情書 <span aria-hidden="true">♡</span></button>
+      </div>
+    </section>
+
+    <section class="finale" id="finale">
+      <div class="finale-inner reveal">
+        <p class="eyebrow">TO BE CONTINUED...</p>
+        <h2>第一年，<br><em>只是我們的開始。</em></h2>
+        <p>希望明年、後年，還有很久很久以後，<br>身邊陪著彼此的人，依然是我們。</p>
+        <button class="surprise-button" id="surpriseButton">再收下一顆愛心 ♥</button>
+        <div class="final-heart" id="finalHeart" aria-hidden="true">♡</div>
+        <p class="footer-sign">made with all my love <span>— for you, always.</span></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>2025.10.31 — 2026.10.31</span><span>YOU <b>♥</b> ME</span></footer>
+
+  <dialog class="lightbox" id="photoDialog" aria-label="照片放大檢視">
+    <button class="modal-close" id="closePhoto" aria-label="關閉照片">×</button>
+    <img id="zoomImage" alt="回憶照片放大顯示" />
+    <p id="zoomCaption"></p>
+  </dialog>
+  <dialog class="letter-dialog" id="letterDialog" aria-label="寫給妳的信">
+    <button class="modal-close dark-close" id="closeLetter" aria-label="關閉情書">×</button>
+    <div class="letter-paper">
+      <p class="letter-overline">A LETTER TO YOU · ♡</p>
+      <h3 id="letterTitle">親愛的妳：</h3>
+      <div id="letterBody" class="letter-body"></div>
+      <p class="letter-sign" id="letterSign">永遠喜歡妳的人 ♡</p>
+      <div class="letter-bottom">OUR FIRST YEAR · AND COUNTING</div>
+    </div>
+  </dialog>
+  <div id="heartsLayer" class="hearts-layer" aria-hidden="true"></div>
+</body>
+</html>

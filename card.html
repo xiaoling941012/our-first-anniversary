@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>一週年驚喜卡片 · QR Code 列印</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2e8e7;color:#583d48;font-family:-apple-system,BlinkMacSystemFont,'PingFang TC',sans-serif;min-height:100vh}.editor{max-width:520px;margin:24px auto;padding:20px 22px;background:white;border-radius:14px;box-shadow:0 4px 25px #784c551a}.editor h1{font-size:19px;margin:0 0 10px}.editor p{font-size:13px;line-height:1.8;color:#7d6870}.editor label{font-size:12px;display:block;margin:14px 0 6px;font-weight:bold}.editor input{display:block;width:100%;padding:13px;border:1px solid #dfc4c8;border-radius:7px;font-size:13px}.editor-actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}.editor button{border:0;padding:12px 16px;background:#925466;color:white;border-radius:7px;font-size:13px;cursor:pointer}.editor button:disabled{background:#cdbfc3;cursor:not-allowed}.editor button:last-child{background:#5e4a51}.status{min-height:21px;color:#815766;font-size:12px;margin-top:12px}.preview-wrap{display:flex;justify-content:center;padding:35px 20px 60px}.card{position:relative;width:105mm;height:148mm;background:#fffaf6;box-shadow:0 12px 50px #4b2d4140;overflow:hidden;display:flex;align-items:center;flex-direction:column;text-align:center;padding:12mm 9mm 9mm;isolation:isolate}.card:before{content:'';position:absolute;border:1px solid #c9919e;inset:5mm;z-index:-1}.card:after{content:'♡';position:absolute;right:-5mm;top:-14mm;color:#f4dee1;font:160px Georgia,serif;z-index:-1}.card .topline{font-size:9px;letter-spacing:.35em;color:#b68190;margin-bottom:8mm}.card .tinyheart{font:32px Georgia,serif;color:#ba7081}.card h2{font:normal 31px/1.48 Georgia,'Songti TC',serif;color:#6b4653;margin:6mm 0 2mm;letter-spacing:.09em}.card .smalltxt{font-size:12px;line-height:2;color:#917a80;letter-spacing:.04em}.qr-frame{border:1px solid #dfbdc6;background:white;width:48mm;height:48mm;margin:9mm auto 3mm;display:grid;place-items:center;padding:3mm;overflow:hidden}.qr-frame #qrcode{width:100%;height:100%;display:flex;align-items:center;justify-content:center}.qr-frame canvas,.qr-frame img{width:100%!important;height:100%!important;image-rendering:pixelated}.qr-placeholder{font-size:12px;color:#af9ba0;line-height:1.8}.scan-label{font-size:11px;letter-spacing:.16em;color:#ae7181;margin:2mm 0}.handwritten{font:italic 18px Georgia,serif;color:#ad6c83;margin:3mm 0}.bottomline{position:absolute;bottom:11mm;color:#ba92a0;font-size:9px;letter-spacing:.21em}.print-note{text-align:center;font-size:12px;color:#927d86;margin:-38px 10px 40px}@page{size:105mm 148mm;margin:0}@media print{body{background:white;min-height:0}.editor,.print-note{display:none!important}.preview-wrap{padding:0}.card{box-shadow:none;margin:0;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+@media(max-width:450px){.editor{margin:12px;padding:17px}.preview-wrap{transform:scale(.86);transform-origin:top center;margin-bottom:-60px}.card{flex:none}}
+</style>
+</head>
+<body>
+<div class="editor">
+  <h1>♥ 一週年 QR Code 卡片產生器</h1>
+  <p>網站部署到 GitHub Pages 後，從線上開啟這張卡片，它會自動把同資料夾的紀念網站轉成 QR Code。你也可以在下面自行填入正式網址。</p>
+  <label for="targetUrl">紀念網站完整網址</label>
+  <input id="targetUrl" type="url" inputmode="url" placeholder="https://你的帳號.github.io/anniversary/"/>
+  <div class="editor-actions"><button id="generateBtn">產生 QR Code</button><button id="printBtn" disabled>列印卡片</button></div>
+  <div class="status" id="status" role="status">尚未產生 QR Code，請先部署網站。</div>
+</div>
+<div class="preview-wrap">
+  <div class="card" aria-label="一週年紀念卡片">
+    <div class="topline">A LITTLE SOMETHING, JUST FOR YOU</div>
+    <div class="tinyheart">♡</div>
+    <h2>致我最喜歡的妳</h2>
+    <div class="smalltxt">我們的一週年，<br>我偷偷準備了一份小禮物。</div>
+    <div class="qr-frame"><div id="qrcode"><span class="qr-placeholder" id="qrPlaceholder">專屬 QR Code<br>將出現在這裡</span></div></div>
+    <div class="scan-label">SCAN ME & OPEN OUR STORY ↗</div>
+    <div class="handwritten">one year, countless memories.</div>
+    <div class="bottomline">2025.10.31 — 2026.10.31 · OUR FIRST ANNIVERSARY</div>
+  </div>
+</div>
+<p class="print-note">建議使用 A6 直式卡紙，列印縮放設為 100%，並開啟背景圖形列印。</p>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(() => {
+  const input=document.getElementById('targetUrl'),box=document.getElementById('qrcode'),status=document.getElementById('status'),printBtn=document.getElementById('printBtn');
+  function generate(){
+    const value=input.value.trim();
+    try{
+      const target=new URL(value);
+      if(target.protocol!=='https:' && target.protocol!=='http:') throw new Error('網址必須以 https:// 開頭');
+      if(!window.QRCode) throw new Error('無法載入 QR Code 程式庫，請連上網路再重新整理');
+      box.replaceChildren();
+      new QRCode(box,{text:target.href,width:260,height:260,colorDark:'#3d2830',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+      status.textContent='QR Code 已產生。列印前請務必用手機相機實際掃描測試。';
+      printBtn.disabled=false;
+    }catch(e){status.textContent=e.message||'網址無效';printBtn.disabled=true;}
+  }
+  document.getElementById('generateBtn').addEventListener('click',generate);
+  printBtn.addEventListener('click',()=>window.print());
+  const params=new URLSearchParams(window.location.search);
+  if(params.has('url')) {input.value=params.get('url');generate();}
+  else if(location.protocol==='https:'||location.protocol==='http:') {input.value=new URL('./',location.href).href;generate();}
+})();
+</script>
+</body></html>
