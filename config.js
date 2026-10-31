@@ -1,9 +1,3 @@
-/*
-  ✉️ 你們的專屬設定（可以在 GitHub 上點開這個檔案修改）
-  startDate: 交往開始日期 YYYY-MM-DD。
-  birthdayDate: 第一次陪她過生日的日期 YYYY-MM-DD。
-  letterParagraphs: 情書正文，可自由修改。
-*/
 /* 2025/10/31 在一起 · 2026/01/14 陪她過生日 · 一週年情書 */
 const LOVE_CONFIG = {
   "startDate": "2025-10-31",
